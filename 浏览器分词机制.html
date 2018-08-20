@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>y</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        p {
+            width: 200px;
+            height: 200px;
+            margin: 0;
+            background: skyblue;
+            /* white-space: normal; */
+        }
+
+        span {
+            white-space: normal;          
+        }
+    </style>
+</head>
+
+<body>
+<!-- 理解：
+    做一个类比, 你的 span 里面只有一个中文汉字, 这个宽20px, 而你的 span 只有10px 宽, 这个文字会被分成两半换行
+    显示吗? 浏览器有自己的分词策略, 对中文来说, 单个汉字永远是不可分割的, 对英文和数字来说, 浏览器会使用一定的策略,
+    把一连串的字符, 比如 ccccccccc 看成了一个不可分割的 word. 你可以通过 word-break: break-word; 来指示浏览器
+    在容器边界把 word 分开. 除此之外还有一个标签 <wbr> 可以指示浏览器 word
+    的边界.
+-->
+    <p>
+        <span> aaaaaaawertaaaaaaaaaaaaaaasdfgefrtuhgagfds<wbr>sfdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        标签，可以通过配置 tag 属性生成别的标签.。另外，当目标路由成功激活时，链接元素自动设置一个表示激活的 CSS 类名
+        aaaaaaaaaaaaaaa
+        </span>
+    </p>
+</body>
+
+</html>

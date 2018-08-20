@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var time=new Date();
+    console.log(time);
+    // var time2=time.setTime(30);
+    // console.log(time2);
+    var time3=time.getTime();
+    console.log(time3);
+
+    var timeval=time.setTime(3000);
+    console.log(timeval);
+    setTimeout(function(){
+        alert('我是小可爱')
+    },timeval)
+</script>
+</html>

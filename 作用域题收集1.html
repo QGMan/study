@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function a(index) {
+            function b() {
+                console.log(index)
+            }
+            b();
+        }
+
+        a(10);
+
+        // 阿里前端面试题 
+        var b =10
+        function fn(b){
+            console.log(b);
+            var b =30;
+            function b(){
+                alert(1);
+            }
+        }
+        fn(20)
+    </script>
+</body>
+
+</html>

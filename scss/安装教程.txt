@@ -1,0 +1,58 @@
+﻿1. 安装Ruby (window下需要自己安装，max下则则自带)
+  sass语言是基于Ruby语言开发的
+  从官网下载Ruby并安装。安装过程中请注意勾选
+   Add Ruby executables to your PATH添加到系统环境变量
+
+2.验证是否安装成功
+ ruby  -v
+ 又因为国内网络的问题导致gem源间歇性中断，因此要更换成国内镜像
+ //1.删除原gem源
+gem sources --remove https://rubygems.org/
+
+//2.添加国内淘宝源
+gem sources -a https://ruby.taobao.org/
+
+//3.打印是否替换成功
+gem sources -l
+
+//4.更换成功后打印如下
+*** CURRENT SOURCES ***
+https://ruby.taobao.org/
+
+3.安装sass或者compass
+Ruby自带一个RubyGems的系统，用于来安装基于Ruby的软件。
+使用这个系统来 轻松地安装Sass和Compass。要安装最新版本的Sass和Compass，你需要输入下面的命令：
+
+//安装如下(如mac安装遇到权限问题需加 sudo gem install sass)
+gem install sass
+gem install compass
+
+4.安装成功确认
+sass -v
+Sass 3.x.x (Selective Steve)
+
+5.如下：常用帮助命令
+//更新sass
+gem update sass
+
+//查看sass版本
+sass -v
+
+//查看sass帮助
+sass -h
+
+
+接下来的使用sass编译：
+sass不能直接放到html中用，你需要安装编译软件，在html中引用编译好的css文件，这样在sass中写完代码，就会自动编译成css
+
+在命令行中运行 Sass：
+sass input.scss output.css
+，名字自己任意取
+
+监视单个 Sass 文件，每次修改并保存时自动编译：
+sass --watch input.scss:output.css
+=》在html中引用的事output.css
+
+监视整个文件夹：
+sass --watch app/sass:public/stylesheets
+
